@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import TransactionsList from "./TransactionsList";
+import TransactionList from "./TransactionList";
 import Search from "./Search";
 import AddTransactionForm from "./AddTransactionForm";
 
 function AccountContainer() {
 
-  const transactionsUrl = "http://localhost:8001/transactions"
+  const transactionsUrl = "http://localhost:4001/transactions"
   const [transactions, setTransactions]  = useState([]);
 
 //Fetch Transactions
@@ -37,7 +37,7 @@ const[search, setSearch] = useState("")
     <div>
       <Search search={search} setSearch={setSearch}/>
       <AddTransactionForm onAddTransaction={addNewTransaction} />
-      <TransactionsList transactions={transactions} onDeleteTransaction={deleteTransaction} search={search} setTransactions={setTransactions}/>
+      <TransactionList transactions={transactions} onDeleteTransaction={deleteTransaction} search={search} setTransactions={setTransactions}/>
     </div>
   );
 }

@@ -24,7 +24,7 @@ function AddTransactionForm({ onAddTransaction }) {
     })
     .then(response => response.json())
     .then(data => onAddTransaction(data))
-    console.log(formData);
+    // console.log(formData);
   }
 
   function handleChange(event) {
@@ -40,8 +40,8 @@ function AddTransactionForm({ onAddTransaction }) {
       <form className="ui form" onSubmit={handleSubmit}>
         <div className="inline fields">
           <input 
-          type="date" 
-          name="date" 
+          type="data" 
+          name="data" 
           value={formData.date} 
           onChange={handleChange}
           />

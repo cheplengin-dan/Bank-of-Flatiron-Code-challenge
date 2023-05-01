@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Transaction from "./Transaction";
 
 
-function TransactionsList({ transactions, onDeleteTransaction, search, setTransactions }) {
+function TransactionList({ transactions, onDeleteTransaction, search, setTransactions }) {
   
 
   //Sorting Functionality
@@ -79,4 +79,4 @@ function TransactionsList({ transactions, onDeleteTransaction, search, setTransa
   );
 }
 
-export default TransactionsList;
+export default TransactionList;
